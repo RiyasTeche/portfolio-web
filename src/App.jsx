@@ -1,17 +1,34 @@
-import Hero from "./components/hero/Hero";
-import Navbar from "./components/navbar/Navbar";
+import NotFound from "./pages/NotFound";
+import About from "./pages/About";
+import Experiance from "./pages/Experiance";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contacts";
+
+import { Routes, Route } from "react-router-dom";
+
+import MainLayout from "./components/layouts/MainLayout";
+import ContactLayout from "./components/layouts/ContactLayout";
 
 function App() {
   return (
     <>
-      <section>
-        <Navbar/>
-        <Hero/>
-      </section>
-      <section>About</section>
-      <section>Experiance</section>
-      <section>Project</section>
-      <section>contact</section>
+      <Routes>
+        {/* Routes with Main Layout */}
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<About />} />
+          <Route path="/experiance" element={<Experiance />} />
+          <Route path="/projects" element={<Projects />} />
+        </Route>
+
+        {/* Routes with Conatct Layout */}
+        <Route element={<ContactLayout />}>
+          <Route path="/contacts" element={<Contact />} />
+        </Route>
+
+        {/* 404 Route */}
+        <Route path="/ac" element={<About />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
   );
 }

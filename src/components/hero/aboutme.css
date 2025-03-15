@@ -1,0 +1,104 @@
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  max-width: 1366px;
+  margin: auto;
+  height: 100%;
+}
+
+.about-wrapper .top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  height: 100px;
+}
+
+.about-wrapper .top h3 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.about-wrapper .top h2 {
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.about-wrapper .bottom {
+  height: calc(100vh - 110px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.about-wrapper .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-wrapper .left img {
+  width: 450px;
+  height: 450px;
+  border-radius: 15px;
+  object-fit: cover;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-shade-start),
+    var(--bg-shade-end)
+  );
+}
+
+.about-wrapper .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.aboutme-badges {
+  display: flex;
+  gap: 20px;
+}
+
+.aboutme-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 15px 25px;
+
+  flex: 1;
+  text-align: center;
+}
+
+.aboutme-badge img {
+  width: 50px;
+  height: 50px;
+  object-fit: fill;
+  border-radius: 100%;
+}
+
+.aboutme-badge p {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+/* MEDIA QURIES FOR DIFFERENT SCREEN SIZE */
+
+@media (max-width: 1366px) {
+  .about-wrapper {
+    max-width: 1186px;
+  }
+}

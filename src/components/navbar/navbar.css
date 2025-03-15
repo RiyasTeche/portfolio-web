@@ -38,7 +38,7 @@
 }
 
 .sidebar-menu .sidebar-links{
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
@@ -64,7 +64,7 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: 2;
-  position: relative;
+  /* position: relative; */
 }
 
 .toggle-button .lines{
@@ -77,6 +77,10 @@
 .toggle-button .lines:nth-child(2n+1){
   transform-origin: left;
 }
+
+
+
+/* MEDIA QURIES FOR DIFFERENT SCREEN SIZE */
 
 
 @media (max-width: 1366px) {
