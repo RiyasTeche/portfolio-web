@@ -15,7 +15,7 @@
 
 .logo span:nth-child(1) {
   font-weight: 600;
-  color: var(--letter-color2);
+  color: var(--primary);
 }
 
 .nav-wrapper span {
@@ -25,12 +25,20 @@
 
 .links {
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 
 .links a:hover{
- transform: scale(1.2,1.2);
+ transform: scale(1.1,1);
  transition: 1s;
+}
+
+.selected{
+  color: var(--bg-color);
+  background-color: var(--letter-color1);
+  padding: 5px 15px;
+  border-radius: 6px;
 }
 
 .sidebar-menu{
@@ -44,6 +52,7 @@
   height: 100vh;
   width: 50vw;
   background-color: var(--bg-color);
+  opacity: .95;
 
   display: flex;
   flex-direction: column;
@@ -51,6 +60,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.sidebar-menu .sidebar-links a:hover{
+  transform: scale(1.1,1);
+  transition: 1s;
+ }
+
 
 .toggle-button{
 
@@ -90,10 +105,18 @@
   }
 }
 
+@media (max-width: 1098px) {
+  
+  .nav-wrapper {
+    max-width: 998px;
+  }
+}
+
+
 @media (max-width: 855px) {
 
   .nav-wrapper {
-    max-width: 789px;
+    max-width: 85vw;
   }
 
 
@@ -121,8 +144,8 @@
 
   .nav-wrapper {
     max-width: 85vw;
+    margin-left: 0;
   }
-
 
   .links {
     display: none;

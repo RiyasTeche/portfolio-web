@@ -17,21 +17,24 @@ const AboutMe = () => {
               <div className="aboutme-badge">
                 <img src="./certificate.png" alt="" />
                 <h3>Experience</h3>
-                <p>5+ years</p>
+                <p>10+ years</p>
                 <p>Fontend & Full Stack Dev</p>
+                <p>Management and Team lead</p>
               </div>
               <div className="aboutme-badge">
-              <img src="./book.png" alt="" />
+                <img src="./book.png" alt="" />
                 <h3>Education</h3>
                 <p>B.Tech Computer Science</p>
                 <p>Diploma in Computer Engineering</p>
               </div>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam
-              eveniet odio mollitia pariatur doloribus facere harum labore unde
-              aperiam omnis nobis, ipsum minima similique ea officiis
-              praesentium consectetur. Nostrum, consectetur!
+              Energetic Information technology master, Inventory, HR and System
+              analysis with 8 + years of experience in administration and almost
+              2year experience in full stack web developer as well. I do have
+              not only in good knowledge about I.T Basics, development and
+              Electrical Retailing & Marketing but also have all-round
+              experience with 10 years in different areas related with the same
             </p>
           </div>
         </div>

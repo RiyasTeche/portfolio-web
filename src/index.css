@@ -29,6 +29,8 @@ body {
   font-family: "Poppins", "Montserrat", sans-serif;
   color: var(--letter-color1);
   min-height: 100vh;
+
+  overflow-x: hidden;
 }
 
 a {

@@ -13,7 +13,7 @@
   gap: 50px;
 }
 
-.hero-wrapper img {
+.hero-wrapper .left img {
   width: 430px;
   height: 430px;
   border-radius: 100%;
@@ -83,8 +83,8 @@
   font-weight: 600;
 }
 
-.hero-links button:nth-child(2) {
-  background-color: var(--letter-color1);
+.hero-links a:nth-child(2) button {
+  background: var(--letter-color1);
   color: var(--bg-color);
   font-weight: 500;
 }
@@ -94,8 +94,147 @@
   transition: 1s;
 }
 
+.right .animated-conatiner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.animated-conatiner img {
+  height: 100%;
+  filter: invert(1); /* Converts to white for blending */
+}
+
+.sliding-text-container {
+  position: absolute;
+  font-size: 50vh;
+  bottom: -100px;
+  white-space: nowrap;
+  color: #1b17170e;
+  width: 50%;
+  font-weight: bold;
+  z-index: -1;
+}
+
+/* MEDIA QURIES FOR DIFFERENT SCREEN SIZE */
+
 @media (max-width: 1366px) {
   .hero-wrapper {
     max-width: 1186px;
+  }
+}
+
+@media (max-width: 1098px) {
+  .hero-wrapper {
+    max-width: 998px;
+  }
+
+  .hero-wrapper {
+    gap: 30px;
+  }
+
+  .hero-wrapper .left img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .hero-wrapper h3 {
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  .hero-wrapper h1 {
+    font-weight: 600;
+    font-size: 40px;
+  }
+
+  .hero-wrapper h2 {
+    font-weight: 500;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 890px) {
+  .hero-wrapper {
+    max-width: 850px;
+  }
+
+  .hero-wrapper {
+    gap: 15px;
+  }
+
+  .hero-wrapper .left img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-wrapper h1 {
+    font-weight: 500;
+    font-size: 35px;
+  }
+
+  .hero-wrapper h2 {
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .hero-links button {
+    padding: 10px 15px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-wrapper {
+    max-width: 650px;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 5px;
+  }
+
+  .hero-wrapper .left img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-wrapper .right {
+    gap: 5px;
+  }
+
+  .right .animated-conatiner {
+    display: none;
+  }
+}
+
+@media (max-width: 447px) {
+  .hero-wrapper h1 {
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+
+  .hero-links button {
+    padding: 10px 15px;
+    font-size: 10px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 330px) {
+  .hero-wrapper .left img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 279px) {
+  .hero-wrapper {
+    max-width: 250px;
+  }
+
+  .hero-wrapper h1 {
+    font-weight: 500;
+    font-size: 20px;
   }
 }

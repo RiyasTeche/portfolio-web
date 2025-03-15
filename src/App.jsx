@@ -22,11 +22,10 @@ function App() {
 
         {/* Routes with Conatct Layout */}
         <Route element={<ContactLayout />}>
-          <Route path="/contacts" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
 
         {/* 404 Route */}
-        <Route path="/ac" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
