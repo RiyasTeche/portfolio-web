@@ -1,0 +1,36 @@
+.navbar {
+  height: 100px;
+  background-color: var(--bg-color);
+
+}
+
+.nav-wrapper {
+  max-width: 1366px;
+  margin: auto;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo span:nth-child(1) {
+  font-weight: 600;
+  color: var(--letter-color2);
+}
+
+.nav-wrapper span {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.links{
+    display: flex;
+    gap: 30px;
+}
+
+@media (max-width: 1366px) {
+  .nav-wrapper {
+    max-width: 1186px;
+  }
+}
