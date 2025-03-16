@@ -16,14 +16,6 @@ const Hero = () => {
         duration: 2,
         staggerChildren: 0.1,
       },
-      scrollButton: {
-        opacity: 0,
-        y: 10,
-        transition: {
-          duration: 2,
-          repeat: Infinity,
-        },
-      },
     },
   };
   const sliderTextVariants = {
@@ -35,7 +27,7 @@ const Hero = () => {
       transition: {
         duration: 20,
         repeat: Infinity,
-        repeatType:"mirror"
+        repeatType: "mirror",
       },
     },
   };
@@ -68,10 +60,10 @@ const Hero = () => {
             </Link>
           </div>
           <div className="awardList">
-            <a href="/" target="_blank">
+            <a href="https://www.linkedin.com/in/muhammed-riyas-8aa65471" target="_blank">
               <img src="./linkedin.png" alt="LinkedIn" title="LinkedIn" />
             </a>
-            <a href="/" target="_blank">
+            <a href="https://github.com/RiyasTeche" target="_blank">
               <img src="./github.png" alt="GitHub" title="GitHub" />
             </a>
           </div>
@@ -79,15 +71,20 @@ const Hero = () => {
             <motion.img
               src="./scroll.png"
               alt=""
-              variants={textVariants}
-              animate="scrollButton"
+              animate={{ y: 10, opacity: 0 }} // Correct: Animating to a number value
+              initial={{ y: 0 }} // Correct: Initial value is also a number
+              transition={{
+                duration: 2, // Duration in seconds
+                repeat: Infinity,
+                repeatType: "mirror",
+              }}
             />
           </div>
         </motion.div>
         <motion.div
           className="sliding-text-container"
           variants={sliderTextVariants}
-          initial="initial" 
+          initial="initial"
           animate="animate"
         >
           Writer Content Creator Influencer

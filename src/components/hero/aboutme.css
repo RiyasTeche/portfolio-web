@@ -46,8 +46,8 @@
 }
 
 .about-wrapper .left img {
-  width: 400px;
-  height: 400px;
+  width: 430px;
+  height: 440px;
   border-radius: 15px;
   object-fit: cover;
   background: linear-gradient(
@@ -96,9 +96,26 @@
   font-size: 15px;
 }
 
-.about-wrapper .right p {
+.bio-container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.bio-container p {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 13px;
+}
+
+.bio-container h2 {
+  background: linear-gradient(180deg, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bio-container img {
+  width: 120px;
+  height: 40px;
+  object-fit: fill;
 }
 
 /* MEDIA QURIES FOR DIFFERENT SCREEN SIZE */
@@ -145,8 +162,8 @@
   }
 
   .about-wrapper .left img {
-    width: 320px;
-    height: 320px;
+    width: 350px;
+    height: 350px;
   }
 
   .aboutme-badges {
@@ -225,5 +242,9 @@
 @media (max-width: 325px) {
   .about-wrapper {
     max-width: 200px;
+  }
+
+  .bio-container h2,img {
+    display: none;
   }
 }

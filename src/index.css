@@ -41,5 +41,15 @@ a {
 section {
   height: 100vh;
   /* scroll-snap-align: center; */
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+.main-layout-wrapper{
+  height: 90vh;
+  width: 100vw;
+  background-color: lightgray;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

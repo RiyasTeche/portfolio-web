@@ -1,7 +1,13 @@
+import Bio from "./../components/bio/Bio";
+
 const Experiance = () => {
   return (
-    <div>Experiance</div>
-  )
-}
+    <>
+      <section className="bio-first-section">
+        <Bio />
+      </section>
+    </>
+  );
+};
 
-export default Experiance
+export default Experiance;

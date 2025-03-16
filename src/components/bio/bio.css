@@ -1,0 +1,159 @@
+.bio-first-section {
+  height: calc(100vh - 100px);
+}
+.bio {
+  height: 100%;
+}
+
+.bio-wrapper {
+  height: 100%;
+  max-width: 1366px;
+  margin: auto;
+  overflow: hidden;
+
+  display: flex;
+}
+
+.bio-text-wrapper{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  flex: 1;
+  overflow-y: scroll;
+}
+/* For Chrome, Safari, and Opera */
+.bio-text-wrapper::-webkit-scrollbar {
+  display: none; 
+}
+
+.skills-conatiner{
+  display: flex;
+  flex-direction: column;
+  gap:10px
+}
+
+.skills-lists{
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding-right: 10px;
+}
+
+.skills-lists span{
+  background-color: var(--letter-color1);
+  color: var(--bg-color);
+  padding: 4px 13px;
+  border-radius: 5px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.skills-lists span:hover{
+  background-color: var(--bg-color);  
+  color:  var(--letter-color1);
+  transition: 1s;
+}
+
+/* STYLES FOR EXPERIANCE (WORK HISTORY) */
+
+.experiance-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap:10px
+}
+
+.experiance-conatiner{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.experiance-list-item{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.experiance-item-left{
+  flex: 1;
+}
+.experiance-item-centre{
+  flex: .2;
+}
+.experiance-item-right{
+  flex: 1;
+}
+
+.job-title{
+  background-color: var(--bg-color);
+  padding: 10px 15px;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.job-desc{
+  padding: 5px 0;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.job-date{
+  padding: 5px 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: brown;
+}
+
+.job-company{
+  background-color: var(--bg-color);
+  padding: 5px 8px;
+  font-weight: 400;
+  font-size: 13px;
+  border-radius: 5px;
+  width: max-content;
+}
+
+.line{
+  height: 100%;
+  width: 5px;
+  background-color: var(--letter-color1);
+  border-radius: 10px;
+  position: relative;
+}
+
+.line-circle{
+  height: 20px;
+  width: 20px;
+  border: solid 2px var(--letter-color1);
+  border-radius: 100%;
+  background-color: var(--bg-color);
+  position: absolute;
+  left: -7px;
+}
+
+
+
+/* MAIN SVG */
+.bio-svg-wrapper{
+  flex: 1.5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: bisque;
+}
+
+
+
+
+
+/* MEDIA QURIES FOR DIFFERENT SCREEN SIZE */
+
+@media (max-width: 1366px) {
+  .bio-wrapper {
+    max-width: 1186px;
+  }
+}

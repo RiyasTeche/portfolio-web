@@ -13,14 +13,15 @@
   justify-content: space-between;
 }
 
-.logo span:nth-child(1) {
+.nav-wrapper .logo span {
   font-weight: 600;
-  color: var(--primary);
+  font-size: 20px;
 }
 
-.nav-wrapper span {
-  font-weight: 400;
-  font-size: 20px;
+.logo span:nth-child(1) {
+  background: linear-gradient(90deg, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .links {
@@ -29,30 +30,34 @@
   gap: 30px;
 }
 
-.links a:hover{
- transform: scale(1.1,1);
- transition: 1s;
+.links a:not(.selected):hover {
+  transform: scale(1.1, 1);
+  transition: 1s;
 }
 
-.selected{
+.selected {
   color: var(--bg-color);
   background-color: var(--letter-color1);
   padding: 5px 15px;
   border-radius: 6px;
 }
 
-.sidebar-menu{
+.selected:hover{
+  cursor:default;
+}
+
+.sidebar-menu {
   display: none;
 }
 
-.sidebar-menu .sidebar-links{
+.sidebar-menu .sidebar-links {
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
   width: 50vw;
   background-color: var(--bg-color);
-  opacity: .95;
+  opacity: 0.95;
 
   display: flex;
   flex-direction: column;
@@ -61,14 +66,12 @@
   align-items: center;
 }
 
-.sidebar-menu .sidebar-links a:hover{
-  transform: scale(1.1,1);
+.sidebar-menu .sidebar-links a:not(.selected):hover {
+  transform: scale(1.1, 1);
   transition: 1s;
- }
+}
 
-
-.toggle-button{
-
+.toggle-button {
   width: 22px;
   height: 18px;
   border: none;
@@ -82,54 +85,47 @@
   /* position: relative; */
 }
 
-.toggle-button .lines{
+.toggle-button .lines {
   width: 22px;
   height: 3px;
   background-color: var(--letter-color1);
   border-radius: 20px;
 }
 
-.toggle-button .lines:nth-child(2n+1){
+.toggle-button .lines:nth-child(2n + 1) {
   transform-origin: left;
 }
 
-
-
 /* MEDIA QURIES FOR DIFFERENT SCREEN SIZE */
 
-
 @media (max-width: 1366px) {
-  
   .nav-wrapper {
     max-width: 1186px;
   }
 }
 
 @media (max-width: 1098px) {
-  
   .nav-wrapper {
     max-width: 998px;
   }
+
+  .logo span:nth-child(1) {
+    font-weight: 600;
+  }
 }
 
-
 @media (max-width: 855px) {
-
   .nav-wrapper {
     max-width: 85vw;
   }
 
-
   .navbar {
     height: 60px;
   }
-  .logo span:nth-child(1) {
-    font-weight: 500;
-  }
 
-  .nav-wrapper span {
-    font-weight: 400;
-    font-size: 13px;
+  .nav-wrapper .logo span {
+    font-weight: 500;
+    font-size: 15px;
   }
 
   .links {
@@ -141,7 +137,6 @@
 }
 
 @media (max-width: 655px) {
-
   .nav-wrapper {
     max-width: 85vw;
     margin-left: 0;
@@ -151,7 +146,8 @@
     display: none;
   }
 
-  .sidebar-menu{
+  .sidebar-menu {
     display: flex;
   }
+
 }
