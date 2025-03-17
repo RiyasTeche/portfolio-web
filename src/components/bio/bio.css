@@ -67,7 +67,6 @@
 .experiance-conatiner{
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .experiance-list-item{
@@ -143,7 +142,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: bisque;
 }
 
 
