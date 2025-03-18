@@ -1,0 +1,57 @@
+export const skillSet = [
+    "html",
+    "css",
+    "scss",
+    "JavaScript",
+    "Node Js",
+    "PHP",
+    "MERN",
+    "Express",
+    "Zend",
+    "SQL",
+    "MONGO DB",
+    "SAP",
+    "Inflow",
+    "Ms office",
+    "Basic Networking",
+    "Windows",
+    "Linux",
+  ];
+  
+  export const experianceList = [
+    {
+      id: 1,
+      title: "Senier Java script engineer10",
+      desc: " My Current emplyment ,may better than the position before!",
+      date: "2024-Present",
+      company: "Tronic rwanda ltd",
+    },
+    {
+      id: 2,
+      title: "Senier Java script engineer20",
+      desc: " My Current emplyment ,may better than the position before!",
+      date: "2024-Present",
+      company: "Tronic rwanda ltd",
+    },
+    {
+      id: 3,
+      title: "Senier Java script engineer30",
+      desc: " My Current emplyment ,may better than the position before!",
+      date: "2024-Present",
+      company: "Tronic rwanda ltd",
+    },
+    {
+      id: 4,
+      title: "Senier Java script engineer40",
+      desc: " My Current emplyment ,may better than the position before!",
+      date: "2024-Present",
+      company: "Tronic rwanda ltd",
+    },
+    {
+      id: 5,
+      title: "Senier Java script engineer50",
+      desc: " My Current emplyment ,may better than the position before!",
+      date: "2024-Present",
+      company: "Tronic rwanda ltd",
+    },
+  ];

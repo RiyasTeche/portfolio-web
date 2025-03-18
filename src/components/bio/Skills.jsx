@@ -1,35 +1,28 @@
-import { motion } from "framer-motion";
+import { animate, delay, motion, useInView } from "framer-motion";
 import "./bio.css";
+import {skillSet} from "./../../../public/data";
+import { useRef } from "react";
 
 const Skills = () => {
-  const skillSet = [
-    "html",
-    "css",
-    "scss",
-    "JavaScript",
-    "Node Js",
-    "PHP",
-    "MERN",
-    "Express",
-    "Zend",
-    "SQL",
-    "MONGO DB",
-    "SAP",
-    "Inflow",
-    "Ms office",
-    "Windows",
-    "Linux",
-  ];
+  
+  const skillRef =useRef();
+  const isSkillInView =useInView(skillRef,{margin:"-100px"})
+
+  const variants={
+    initial:{opacity:0, x:"-500px"},
+    animate:{opacity:1,x:0},
+    transition: { duration: 2,delay:.7}
+  }
 
   return (
     
-    <div className="skills-conatiner">
-      <h3>SKILLS</h3>
-      <div className="skills-lists">
+    <div className="skills-conatiner" ref={skillRef}>
+      <motion.h3 variants={variants} animate={isSkillInView ? "animate" : "initial"}>SKILLS</motion.h3>
+      <motion.div variants={variants} animate={isSkillInView ? "animate" : "initial"} className="skills-lists">
         {skillSet.map((skill) => (
           <span key={skill}>{skill}</span>
         ))}
-      </div>
+      </motion.div>
       {/* SKILL SCROLL SVG */}
       <div className="svg-skills-conatiner">
         <motion.svg
@@ -42,8 +35,8 @@ const Skills = () => {
           strokeWidth="1"
           strokeLinecap="round"
           strokeLinejoin="round"
-          initial={{ y: -5 }}
-          animate={{ y: 5 }}
+          initial={{ opacity:0,y: -5 }}
+          animate={{ opacity:1, y: 5 }}
           transition={{
             repeat: Infinity,
             repeatType: "reverse",
