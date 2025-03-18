@@ -1,10 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./bio.css";
 import Skills from "./Skills";
 import WorkHistory from "./WorkHistory";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const Bio = () => {
   const divRef = useRef(null);
@@ -19,27 +18,41 @@ const Bio = () => {
   const rotatesBackward3 = useTransform(scrollYProgress, [0, 1], [0, -90]);
   const rotatesBackward4 = useTransform(scrollYProgress, [0, 1], [0, -45]);
 
+  const [size, setSize] = useState(window.innerWidth);
+
   useEffect(() => {
+    
+    const handleResize = () => {
+      setSize(window.innerWidth);
+    };
+
     const element = divRef.current;
+    if (size > "655") {
+      //auto scrolling only after screen size 655px
+      const timeoutdown = setTimeout(() => {
+        element.scrollTo({
+          top: element.scrollHeight, // Scroll to bottom
+          behavior: "smooth", // Smooth scrolling
+        });
+      }, 1100); // Delay before scrolling up
 
-    const timeoutdown = setTimeout(() => {
-      element.scrollTo({
-        top: element.scrollHeight, // Scroll to bottom
-        behavior: "smooth", // Smooth scrolling
-      });
-    }, 1100); // Delay before scrolling up
+      // After 2 seconds, scroll back to top
+      const timeoutup = setTimeout(() => {
+        element.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }, 2000); // Delay before scrolling up
 
-    // After 2 seconds, scroll back to top
-    const timeoutup = setTimeout(() => {
-      element.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 2000); // Delay before scrolling up
+      window.addEventListener("resize", handleResize);
 
-    // ✅ Cleanup function to avoid memory leak
-    return () => clearTimeout(timeoutdown, timeoutup);
-  }, []); // Runs only once when component mounts
+      // ✅ Cleanup function to avoid memory leak
+      return () => {
+        clearTimeout(timeoutdown, timeoutup);
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, [size]); 
 
   return (
     <div className="bio">

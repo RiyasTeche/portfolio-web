@@ -31,13 +31,15 @@
 }
 
 .links a:not(.selected):hover {
-  transform: scale(1.1, 1);
+  transform: scale(1.1, 1.2);
   transition: 1s;
 }
 
 .selected {
-  color: var(--bg-color);
-  background-color: var(--letter-color1);
+  color: var(--letter-color1);
+  /* color: var(--bg-color); */
+  /* background-color: var(--letter-color1); */
+  border: .5px solid var(--letter-color1);
   padding: 5px 15px;
   border-radius: 6px;
 }
@@ -67,7 +69,7 @@
 }
 
 .sidebar-menu .sidebar-links a:not(.selected):hover {
-  transform: scale(1.1, 1);
+  transform: scale(1.1, 1.1);
   transition: 1s;
 }
 
