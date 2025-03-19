@@ -5,8 +5,29 @@
   position: relative;
 }
 
-.project-section:first-of-type{
-    height: calc(100vh - 100px);
+.scroll-project-div{
+  height: calc(100vh - 160px);
+  max-width: 1366;
+  scroll-snap-align: center;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 20px;
+}
+
+.scroll-project-div img{
+  height: 25%;
+  object-fit: cover;
+  filter: invert(1) brightness(0%);
+
+}
+
+.project-section{
+ scroll-snap-align: center;
+ overflow: hidden;
 }
 
 .project-header {
@@ -22,17 +43,12 @@
 }
 
 .project-header h1 {
-  background: linear-gradient(90deg, red, blue);
+  font-weight: 800;
+  font-size: 45px;
+
+  background: linear-gradient(180deg, red, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 800;
-  font-size: 40px;
-}
-
-.project-header .header-line {
-  width: 350px;
-  height: 5px;
-  background: linear-gradient(90deg, red, blue);
 }
 
 .project-wrapper {
@@ -48,15 +64,70 @@
   flex: 1;
   border-radius: 6px;
   overflow: hidden;
+  padding: 5px 20px;
 }
 
 .project-img-wrapper img{
     height: 100%;
     width: 100%;
+    border-radius: 6px;
 }
 .project-text-wrapper {
   flex: 1;
+  height: 100%;
+  width: 100%;
+  padding: 5px 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+
 }
+
+.project-text-wrapper h1{
+  font-weight: 700;
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+
+.project-text-wrapper p{
+  font-size: 15px;
+  color: var(--letter-color1);
+}
+
+.project-buttons-conatiner{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.project-buttons-conatiner button{
+  font-size: 15px;
+  font-weight: 200;
+
+  width: max-content;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.project-buttons-conatiner a:nth-child(1) button{
+  background-color: var(--letter-color1);
+  color: var(--bg-color);
+}
+.project-buttons-conatiner a:nth-child(2) button{
+  background-color:var(--bg-color);
+  color: var(--letter-color1);
+}
+
+.project-buttons-conatiner button:hover{
+  transform: scale(1.1,1.1);
+  transition: all 0.5s ease-out;
+}
+
+
 
 /* MEDIA QURIES FOR DIFFERENT SCREEN SIZE */
 
