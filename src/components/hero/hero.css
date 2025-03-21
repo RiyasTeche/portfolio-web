@@ -231,6 +231,10 @@
     width: 200px;
     height: 200px;
   }
+
+  .hero-links button {
+    width: max-content;
+  }
 }
 
 @media (max-width: 279px) {

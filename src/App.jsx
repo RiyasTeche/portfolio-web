@@ -2,7 +2,7 @@ import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Experiance from "./pages/Experiance";
 import Projects from "./pages/Project/Projects";
-import Contact from "./pages/Contacts";
+import Contact from "./pages/Contacts/Contacts";
 
 import { Routes, Route } from "react-router-dom";
 
