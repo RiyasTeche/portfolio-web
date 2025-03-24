@@ -37,8 +37,6 @@
 
 .selected {
   color: var(--letter-color1);
-  /* color: var(--bg-color); */
-  /* background-color: var(--letter-color1); */
   border: .5px solid var(--letter-color1);
   padding: 5px 15px;
   border-radius: 6px;

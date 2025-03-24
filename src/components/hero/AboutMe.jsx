@@ -52,7 +52,9 @@ const AboutMe = () => {
                 all-round experience with 10 years in different areas related
                 with the same
               </p>
-              <img src="./signature.png" alt="" />
+              <div style={{textAlign:"right"}}>
+                <img src="./signature.png" alt="" />
+              </div>
             </motion.div>
           </motion.div>
         </div>

@@ -56,40 +56,48 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 35px;
 }
 
 .project-img-wrapper {
   flex: 1;
   border-radius: 6px;
-  padding: 5px 20px;
+  padding: 5px 5px;
   margin-left: 15px;
 
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  gap: 5px;
 
   background: linear-gradient(
     to bottom,
     var(--bg-shade-start),
     var(--bg-shade-end)
   );
-  width: max-content;
   position: relative;
+  height: 50%;
+}
+
+.button-conatiner{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-main-img-container{
+  flex: 20;
+  height: 100%;
+
+  display: flex;
+  align-items: flex-end;
 }
 
 .project-image {
   height: auto; /* Keeps aspect ratio */
   width: 100%;
   border-radius: 6px;
-  object-fit: contain;
+  object-fit: cover;
 
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 89%, 0% 100%);
   transform: rotate(3.5deg) translateY(20px);
   border: 0.5px solid lightgray;
   cursor: grab;
@@ -103,14 +111,14 @@
   z-index: 1;
   gap: 5px;
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   right: 0;
   margin-right: 5px;
 }
 
 .project-image:hover {
   border: none;
-  transform: rotate(0) scale(1.1, 1.1);
+  transform: rotate(0) scale(1.2, 1.2);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   transition: all 1s ease;
 }
@@ -125,19 +133,25 @@
 
 .prev,
 .next {
-  width: 30px;
-  height: 30px;
-  padding: 5px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px;
   background-color: var(--bg-color);
+  border: 0.5px solid lightgray;
   border-radius: 100%;
-  border: none;
+  object-fit: cover;
   cursor: pointer;
-  top: 50%;
   z-index: 1;
 }
 
-.next {
-  margin-left: 10px;
+.prev:disabled,
+.next:disabled {
+  background-color: gray;
+  color: #aaa;
+  cursor: not-allowed;
 }
 
 .project-text-wrapper {
@@ -202,7 +216,33 @@
   }
 }
 
+@media (max-width: 1025px) {
+  .project {
+    max-width: 1000px;
+  }
+
+  .project-img-wrapper {
+    height: 40%;
+  }
+
+
+  .project-image:hover {
+    transform: rotate(0) scale(1.2, 1.35);
+  }
+
+  .project-text-wrapper h1 {
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+}
+
 @media (max-width: 954px) {
+
+  .project-image{
+    transform: rotate(3.5deg) translateY(16px);
+  }
+
   .project-text-wrapper h1 {
     font-weight: 600;
     font-size: 22px;
@@ -255,14 +295,17 @@
   }
 
   .project-img-wrapper {
-    height: 50%;
+    height: 70%;
     width: 80%;
-    background: transparent;
+  }
+
+  .project-image{
+    transform: rotate(3.5deg) translateY(23px);
   }
 
   .prev,
   .next {
-   border: 1px solid gray;
+    border: 1px solid gray;
   }
 
   .project-text-wrapper {
@@ -274,14 +317,16 @@
 }
 
 @media (max-width: 665px) {
-
   .project-wrapper {
     height: 80vh;
   }
 
-  .prev,
-  .next {
-    display: none;
+  .project-img-wrapper {
+    background: transparent;
+  }
+
+  .project-main-img-container{
+    align-items: center;
   }
 
   .project-image {
@@ -289,11 +334,28 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 
+  .tech-img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .tech-images {
+    right: 35px;
+    bottom: 10px;
+  }
+
+  .prev,
+.next {
+  width:30px;
+  height:max-content;
+  padding: 5px 5px
 }
 
-@media (max-width: 366px) {
+}
+
+@media (max-width: 409px) {
   .project {
-    max-width: 340px;
+    max-width: 350px;
   }
 
   .project-wrapper {
@@ -304,7 +366,6 @@
   .project-section {
     align-items: flex-start;
   }
-
 
   .scroll-project-div {
     height: calc(100vh - 160px);
@@ -317,6 +378,21 @@
   }
 
   .project-img-wrapper {
-    height: 200px;
+    height: 50%;
+  }
+
+  .prev,
+  .next {
+    display: none;
+  }
+
+  .project-image {
+    transform: rotate(0);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .tech-images {
+    right:15px;
+    bottom: 40px;
   }
 }

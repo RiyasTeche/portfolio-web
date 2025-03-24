@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import "./project.css";
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import {experianceList} from "./../../../public/experianceData";
-
+import { experianceList } from "./../../../public/experianceData";
 
 const SingleProject = ({ item }) => {
   const ref = useRef();
@@ -25,39 +24,50 @@ const SingleProject = ({ item }) => {
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
-
+ console.log(!(images.length > 1))
   return (
     <section className="project-section">
       <div className="project-wrapper" ref={ref}>
-        {images.length > 1 && (
-          <button className="prev" onClick={prevSlide}>
-            &#10094;
-          </button>
-        )}
         <div className="project-img-wrapper">
-          <img
-            className="project-image"
-            src={PF + images[currentIndex]}
-            alt=""
-          />
-          {item?.tech && (
-            <div className="tech-images">
-              {item.tech.map((icon) => (
-                <img
-                  className="tech-img"
-                  src={PF + "/png/" + icon + ".png"}
-                  alt=""
-                  key={icon}
-                />
-              ))}
-            </div>
-          )}
+          <div className="button-conatiner">
+            <button
+              className="prev"
+              onClick={prevSlide}
+              disabled={!(images.length > 1)}
+            >
+              &#10094;
+            </button>
+          </div>
+          <div className="project-main-img-container">
+            <img
+              className="project-image"
+              src={PF + images[currentIndex]}
+              alt=""
+            />
+            {item?.tech && (
+              <div className="tech-images">
+                {item.tech.map((icon) => (
+                  <img
+                    className="tech-img"
+                    src={PF + "/png/" + icon + ".png"}
+                    alt=""
+                    key={icon}
+                    title={icon}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="button-conatiner">
+            <button
+              className="next"
+              onClick={nextSlide}
+              disabled={!(images.length > 1)}
+            >
+              &#10095;
+            </button>
+          </div>
         </div>
-        {images.length > 1 && (
-          <button className="next" onClick={nextSlide}>
-            &#10095;
-          </button>
-        )}
         <motion.div className="project-text-wrapper" style={{ y: y }}>
           <h1>{item.title}</h1>
           <p>{item.desc}</p>
@@ -72,7 +82,7 @@ const SingleProject = ({ item }) => {
             {item.code && (
               <Link to={item.code} target="_blank">
                 <button
-                  style={{ cursor: item.code ? "pointer" : " not-allowed" }}
+                  style={{ cursor: item.code ? "pointer" : "not-allowed" }}
                 >
                   Code Review
                 </button>
