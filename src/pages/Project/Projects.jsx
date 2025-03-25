@@ -6,7 +6,8 @@ import { ProjectsList } from "./../../../public/experianceData";
 
 const SingleProject = ({ item }) => {
   const ref = useRef();
-  const PF = "./public/";
+  const PF = "./../../../public/";
+  // const PF = "./public/";
   const { scrollYProgress } = useScroll({ target: ref });
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = item.img;

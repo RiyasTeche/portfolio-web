@@ -81,6 +81,7 @@
   border-radius: 40px;
   border: .5px solid var(--letter-color1);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .hero-links button:nth-child(1) {
