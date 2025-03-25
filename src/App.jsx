@@ -15,6 +15,7 @@ function App() {
       <Routes>
         {/* Routes with Main Layout */}
         <Route element={<MainLayout />}>
+          <Route path="/portfolio-web" element={<About />} />
           <Route path="/" element={<About />} />
           <Route path="/experiance" element={<Experiance />} />
           <Route path="/projects" element={<Projects />} />
