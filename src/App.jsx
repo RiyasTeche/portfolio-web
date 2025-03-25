@@ -4,20 +4,20 @@ import Experiance from "./pages/Experiance";
 import Projects from "./pages/Project/Projects";
 import Contact from "./pages/Contacts/Contacts";
 
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import MainLayout from "./components/layouts/MainLayout";
 import ContactLayout from "./components/layouts/ContactLayout";
 
 function App() {
   return (
-    <BrowserRouter basename="/portfolio-web">
+    <>
       <Routes>
         {/* Routes with Main Layout */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<About />} />
           {/* ADDED FOR GIT HUB DEPOLOYMENT */}
-          {/* <Route path="/portfolio-web" element={<About />} /> */}
+          <Route path="/portfolio-web" element={<About />} />
           <Route path="/experiance" element={<Experiance />} />
           <Route path="/projects" element={<Projects />} />
         </Route>
@@ -30,7 +30,7 @@ function App() {
         {/* 404 Route */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-      </BrowserRouter>
+    </>
   );
 }
 
