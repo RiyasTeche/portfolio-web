@@ -45,7 +45,7 @@ export const skillSet = [
       title: "System Analyst",
       desc: "Leading MNC located in East Africa TRONIC electricals and worked for this company in Dar-es-salam ,Tanzania as postion computer system analyst, permit no RPB1060191.",
       date: "May 2015 - February 2017",
-      company: "Cash Sales Store Ltd , Tanzania",
+      company: "Cash Sales Ltd,Tanzania",
     },
     {
       id: 5,

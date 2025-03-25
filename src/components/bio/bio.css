@@ -163,6 +163,14 @@
   }
 }
 
+@media (max-width: 907px) {
+
+  .line-circle{
+    background: var(--letter-color1); 
+  }
+
+}
+
 @media (max-width: 855px) {
   .bio-wrapper {
     max-width: 800px;
@@ -179,6 +187,10 @@
   .bio-svg-wrapper{
     flex: 1;
   }
+
+  .line-circle{
+    background: var(--letter-color1); 
+  }
 }
 
 @media (max-width: 655px) {
@@ -189,6 +201,19 @@
   .bio-svg-wrapper{
     display: none;
   }
+
+  .line-circle{
+    background-color: var(--bg-color);
+  }
+
+}
+
+@media (max-width: 475px) {
+
+  .line-circle{
+    background: var(--letter-color1); 
+  }
+
 }
 
 @media (max-width: 366px) {
