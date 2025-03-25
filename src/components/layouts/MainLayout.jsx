@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Navbar from "../navbar/Navbar";
 import { Outlet, useLocation } from "react-router-dom";
 
@@ -6,7 +6,6 @@ export default function MainLayout() {
   const pathName = useLocation().pathname.toUpperCase();
   return (
     <div key={pathName}>
-      {/* <AnimatePresence> */}
         <Navbar />
         <motion.div
           className="main-layout-wrapper"
@@ -19,7 +18,6 @@ export default function MainLayout() {
         <div>
           <Outlet />
         </div>
-      {/* </AnimatePresence> */}
     </div>
   );
 }
