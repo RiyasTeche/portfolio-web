@@ -23,7 +23,7 @@ export const ProjectsList = [
       desc: "My refined portfolio Website ,animations,email integration,routers for page switching and parelex effects for smooth viewing experiance!",
       img: ["portfolio1.jpg","portfolio2.jpg","portfolio3.jpg","portfolio4.jpg","portfolio5.jpg","portfolio6.jpg"],
       tech: ["react", "css", "framer-motion", "navigation"],
-      demo: "",
+      demo: "https://riyasteche.github.io/portfolio-web/",
       code: "https://github.com/RiyasTeche/portfolio-web/tree/main/src",
 
     },
