@@ -31,7 +31,7 @@ const AboutMe = () => {
                 <img src="./certificate.png" alt="" />
                 <h3>Experience</h3>
                 <p>10+ years</p>
-                <p>Fontend & Full Stack Dev</p>
+                <p>UI & Full Stack Developer</p>
                 <p>Management and Team lead</p>
               </motion.div>
               <motion.div className="aboutme-badge" variants={textVariants}>
@@ -52,7 +52,7 @@ const AboutMe = () => {
                 all-round experience with 10 years in different areas related
                 with the same
               </p>
-              <div style={{textAlign:"right"}}>
+              <div>
                 <img src="./signature.png" alt="" />
               </div>
             </motion.div>

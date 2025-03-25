@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./project.css";
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { experianceList } from "./../../../public/experianceData";
+import { ProjectsList } from "./../../../public/experianceData";
 
 const SingleProject = ({ item }) => {
   const ref = useRef();
@@ -12,19 +12,19 @@ const SingleProject = ({ item }) => {
   const images = item.img;
 
   const y = useTransform(scrollYProgress, [0, 1], [-30, 30]);
-
+// SLIDER PREVIOUS BTN CLICK
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
-
+// SLIDER NEXT CLICK
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
- console.log(!(images.length > 1))
+
   return (
     <section className="project-section">
       <div className="project-wrapper" ref={ref}>
@@ -75,6 +75,7 @@ const SingleProject = ({ item }) => {
             <Link to={item.demo} target="_blank">
               <button
                 style={{ cursor: item.demo ? "pointer" : " not-allowed" }}
+                disabled={!(item.demo)}
               >
                 See Demo
               </button>
@@ -114,7 +115,7 @@ const Projects = () => {
       <div className="project-header">
         <h1>Featured Works</h1>
       </div>
-      {experianceList.map((item) => (
+      {ProjectsList.map((item) => (
         <SingleProject item={item} key={item.id} />
       ))}
     </div>

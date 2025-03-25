@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  height: 200px;
+  height: 130px;
   position: sticky;
   bottom: 0;
   left: 0;
@@ -13,7 +13,6 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  gap: 5px;
   padding: 15px 20px;
 }
 
@@ -24,26 +23,60 @@
   margin-bottom: 10px;
 }
 
-/* .footer-icons {
+.footer-icons {
   display: flex;
   gap: 15px;
   justify-content: center;
   font-size: 1.8rem;
-  margin-bottom: 10px;
-} */
+} 
 
-/* .icon {
-  color: white;
+ .icon {
+  color: lightgrey;
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.icon:hover {
-  color: #00aced;
+.icon img {
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  background: var(--bg-color);
+  border-radius: 100%;
+  cursor: pointer;
+
+}
+
+.icon img:hover {
   transform: scale(1.2) rotate(10deg);
-} */
+} 
 
 .footer-copy {
-  margin-top: 10px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+
+/* MEDIA QURIES FOR DIFFERENT SCREEN SIZE */
+
+@media (max-width: 460px) {
+
+  .footer {
+    height: 100px;
+  }
+
+  .footer-title {
+    font-size: .9rem;
+    margin-bottom: 8px;
+  }
+  .footer-copy {
+    font-size: 0.5rem;
+    margin-bottom: 8px;
+  }
+
+  .icon img {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+  
+  }
 }

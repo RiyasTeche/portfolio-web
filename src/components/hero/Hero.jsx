@@ -47,9 +47,9 @@ const Hero = () => {
           <h3>Hello,I'm</h3>
           <h1>MUHAMMED RIYAS</h1>
           <h2>
-            Web Developer
+            Web# Full Stack Developer
             <br />
-            and UI Designer
+            and _UI Designer
           </h2>
           <div className="hero-links">
             <a href={resume} target="_blank">

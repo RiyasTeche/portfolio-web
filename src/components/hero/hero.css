@@ -21,6 +21,7 @@
   object-fit: cover;
   background: linear-gradient(
     to bottom,
+    lightgray,
     var(--bg-shade-start),
     var(--bg-shade-end)
   );
