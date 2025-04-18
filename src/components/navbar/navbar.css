@@ -1,6 +1,7 @@
 .navbar {
   height: 100px;
   background-color: var(--bg-color);
+    scroll-snap-align: center;
 }
 
 .nav-wrapper {

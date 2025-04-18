@@ -1,6 +1,5 @@
 {
   "name": "portfolio",
-  "homepage":"https://riyasteche.github.io/portfolio-web",
   "private": true,
   "version": "0.0.0",
   "type": "module",

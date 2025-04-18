@@ -214,6 +214,13 @@
     background: var(--letter-color1); 
   }
 
+  .experiance-item-left{
+    padding: 10px 10px;
+  }
+  .experiance-item-right{
+    padding: 10px 10px;
+  }
+
 }
 
 @media (max-width: 366px) {
