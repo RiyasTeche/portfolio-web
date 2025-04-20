@@ -60,7 +60,7 @@ const Hero = () => {
             </Link>
           </div>
           <div className="awardList">
-            <a href="https://www.linkedin.com/in/muhammed-riyas-8aa65471" target="_blank">
+            <a href="https://www.linkedin.com/in/mohd-riyasm/" target="_blank">
               <img src="./linkedin.png" alt="LinkedIn" title="LinkedIn" />
             </a>
             <a href="https://github.com/RiyasTeche" target="_blank">

@@ -59,7 +59,7 @@ const Footer = () => {
                 <img src="./github.png" alt="GitHub" title="GitHub" />
               </a>
               <a
-                href="https://www.linkedin.com/in/muhammed-riyas-8aa65471"
+                href="https://www.linkedin.com/in/mohd-riyasm/"
                 target="_blank"
                 className="icon"
               >

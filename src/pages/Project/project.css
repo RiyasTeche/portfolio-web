@@ -117,6 +117,7 @@
   align-items: center;
   position: relative;
   background-color: #6b5252;
+  border-radius: 6px;
 }
 
 .project-image {
