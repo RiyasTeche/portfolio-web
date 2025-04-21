@@ -87,7 +87,7 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          Writer Content Creator Influencer
+          #Writer_#Content_Creator-Influencer
         </motion.div>
       </div>
     </div>
