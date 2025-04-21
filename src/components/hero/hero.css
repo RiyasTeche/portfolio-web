@@ -258,6 +258,16 @@
     height: 30px;
     padding: 5px;
   }
+
+  .sliding-text-container {
+    bottom:20%;
+  }
+
+  .sliding-text-container h1 {
+    font-size: 10vh;
+    padding-left: 50%;
+    padding-right: 5%;
+  }
 }
 
 @media (max-width: 447px) {
@@ -276,16 +286,6 @@
     padding: 10px 15px;
     font-size: 10px;
     width: 100px;
-  }
-
-  .sliding-text-container {
-    bottom:20%;
-  }
-
-  .sliding-text-container h1 {
-    font-size: 10vh;
-    padding-left: 50%;
-    padding-right: 5%;
   }
 }
 
