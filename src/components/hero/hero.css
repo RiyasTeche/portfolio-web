@@ -265,6 +265,11 @@
 }
 
 @media (max-width: 447px) {
+  .hero-wrapper .right {
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
   .hero-wrapper .right h1 {
     font-weight: 600;
     font-size: 25px;
