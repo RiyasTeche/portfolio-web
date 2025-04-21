@@ -51,7 +51,7 @@
 .hero-wrapper h2 {
   font-weight: 500;
   font-size: 35px;
-  background: linear-gradient(90deg,red,blue);
+  background: linear-gradient(90deg, red, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -81,7 +81,7 @@
   padding: 10px 15px;
   width: 200px;
   border-radius: 40px;
-  border: .5px solid var(--letter-color1);
+  border: 0.5px solid var(--letter-color1);
   cursor: pointer;
   white-space: nowrap;
 }
@@ -117,14 +117,28 @@
 
 .sliding-text-container {
   position: absolute;
-  font-size: 50vh;
   bottom: -100px;
+  z-index: -1;
+  width: 50%;
+}
+
+.sliding-text-container h1 {
+  font-size: 50vh;
   white-space: nowrap;
   display: inline-block;
   color: #1b17170e;
-  /* width: 50%; */
   font-weight: bold;
-  z-index: -1;
+  padding-left: 100%;
+  animation: slideText 30s ease-in-out infinite alternate;
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(-105%);
+  }
 }
 
 /* MEDIA QURIES FOR DIFFERENT SCREEN SIZE */

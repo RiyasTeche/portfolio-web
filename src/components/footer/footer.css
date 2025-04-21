@@ -29,7 +29,6 @@
   opacity: 0.02;
   display: inline-block;
   white-space: nowrap;
-  /* animation: slideText 25s ease-in-out infinite alternate; */
   animation: slideText 30s linear infinite;
   padding-left: 100%;
 }
