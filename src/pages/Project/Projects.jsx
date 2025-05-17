@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./project.css";
 import { useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll } from "framer-motion";
 import { ProjectsList } from "./../../../public/experianceData";
 
 const SingleProject = ({ item }) => {
@@ -155,6 +155,13 @@ const Projects = () => {
             <h1>Featured Works</h1>
           </div>
         </div>
+        <motion.div
+          className="scrollIndicator"
+          style={{
+            scaleX: useScroll().scrollYProgress,
+            originX: 0,
+          }}
+        />
         {ProjectsList.map((item) => (
           <SingleProject item={item} key={item.id} />
         ))}

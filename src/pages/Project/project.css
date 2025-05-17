@@ -41,6 +41,16 @@
   -webkit-text-fill-color: transparent;
 }
 
+.scrollIndicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: var(--bg-shade-end);
+  z-index: 1;
+}
+
 .scroll-project-div img {
   height: 22%;
   object-fit: cover;
@@ -343,7 +353,6 @@
 }
 
 @media (max-width: 490px) {
-
   .project-header {
     min-height: calc(100vh - calc(100vh - 200px));
   }
