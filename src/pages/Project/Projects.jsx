@@ -40,9 +40,7 @@ const SingleProject = ({ item }) => {
   return (
     <section className="project-section">
       <div className="project-wrapper">
-        <div
-          className="project-img-wrapper"
-        >
+        <div className="project-img-wrapper">
           <div className="button-conatiner">
             <button
               className="prev"
@@ -52,13 +50,16 @@ const SingleProject = ({ item }) => {
               &#10094;
             </button>
           </div>
-          <div className="project-main-img-container" ref={ref}>
-            <motion.img
+          <motion.div
+            className="project-main-img-container"
+            ref={ref}
+            variants={variants}
+            animate={isInView ? "animate" : "initial"}
+          >
+            <img
               className="project-image"
               src={PF + images[currentIndex]}
               alt=""
-              variants={variants}
-              animate={ isInView ? "animate" : "initial"}
             />
             {item?.tech && (
               <div className="tech-images">
@@ -73,7 +74,7 @@ const SingleProject = ({ item }) => {
                 ))}
               </div>
             )}
-          </div>
+          </motion.div>
           <div className="button-conatiner">
             <button
               className="next"
