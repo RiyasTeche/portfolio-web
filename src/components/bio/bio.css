@@ -63,6 +63,10 @@
   transition: 1s;
 }
 
+.scroll-button{
+  cursor: pointer;
+}
+
 /* STYLES FOR EXPERIANCE (WORK HISTORY) */
 
 .experiance-wrapper{

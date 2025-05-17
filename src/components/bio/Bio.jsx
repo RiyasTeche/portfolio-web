@@ -6,7 +6,7 @@ import WorkHistory from "./WorkHistory";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Bio = () => {
-  const divRef = useRef(null);
+  const divRef = useRef();
   const { scrollYProgress } = useScroll({ container: divRef });
 
   const rotatesForward1 = useTransform(scrollYProgress, [0, 1], [0, 360]);
@@ -21,12 +21,11 @@ const Bio = () => {
   const [size, setSize] = useState(window.innerWidth);
 
   useEffect(() => {
-    
+    const element = divRef.current;
     const handleResize = () => {
       setSize(window.innerWidth);
     };
 
-    const element = divRef.current;
     if (size > "655") {
       //auto scrolling only after screen size 655px
       const timeoutdown = setTimeout(() => {
@@ -46,7 +45,7 @@ const Bio = () => {
 
       window.addEventListener("resize", handleResize);
 
-      // ✅ Cleanup function to avoid memory leak
+      // Cleanup function to avoid memory leak
       return () => {
         clearTimeout(timeoutdown, timeoutup);
         window.removeEventListener("resize", handleResize);
@@ -60,9 +59,9 @@ const Bio = () => {
         {/* TEXT CONATINER */}
         <div className="bio-text-wrapper" ref={divRef}>
           {/* SKILLS */}
-          <Skills />
+          <Skills scrollableConatinerRef={divRef}/>
           {/* EXPERIANCE */}
-          <WorkHistory />
+          <WorkHistory scrollableConatinerRef={divRef}/>
         </div>
         {/* SVG CONATINER */}
         <div className="bio-svg-wrapper">

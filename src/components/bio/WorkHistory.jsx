@@ -3,24 +3,29 @@ import { motion, useInView } from "framer-motion";
 import { experianceList } from "./../../../public/data";
 import { useRef } from "react";
 
-const WorkHistory = () => {
+const WorkHistory = ({ scrollableConatinerRef }) => {
   const historyRef = useRef();
   const isInView = useInView(historyRef, { margin: "-110px" });
+  const scrollableConatiner = scrollableConatinerRef.current;
 
   const variants = {
     initial: { opacity: 0, x: "-300px" },
     animate: { opacity: 1, x: 0 },
     transition: { duration: 2, delay: 0.7 },
-  }
+  };
+
+  const moveToTop = () => {
+    scrollableConatiner.scrollTo({
+      top: 0, // Scroll to top
+      behavior: "smooth", // Smooth scrolling
+    });
+  };
 
   return (
-    <div className="experiance-wrapper"  >
-      <motion.h3
-        variants={variants}
-        animate={isInView ? "animate" : "initial"}
-      >
+    <div className="experiance-wrapper">
+      <motion.h3 variants={variants} animate={isInView ? "animate" : "initial"}>
         EXPERIANCE
-      </motion.h3 >
+      </motion.h3>
       {/* EXPERIANCE LIST CONTAINER */}
       <div ref={historyRef}>
         {/* EXPERIANCE LIST ITEM */}
@@ -61,8 +66,10 @@ const WorkHistory = () => {
         ))}
       </div>
       {/* SKILL SCROLL SVG */}
-      <div className="svg-skills-conatiner">
+      <div className="svg-skills-conatiner"  title="scroll up">
         <motion.svg
+          onClick={() => moveToTop()}
+          className="scroll-button"
           width="40"
           height="40"
           viewBox="0 0 24 24"
