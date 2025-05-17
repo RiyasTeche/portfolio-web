@@ -17,7 +17,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<About />} />
           {/* ADDED FOR GIT HUB DEPOLOYMENT */}
-          {/* <Route path="/portfolio-web" element={<About />} /> */}
+          <Route path="/portfolio-web" element={<About />} />
           <Route path="/experiance" element={<Experiance />} />
           <Route path="/projects" element={<Projects />} />
 
