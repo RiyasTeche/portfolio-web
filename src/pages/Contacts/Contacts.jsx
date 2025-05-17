@@ -52,7 +52,7 @@ const Contacts = () => {
               {l}
             </motion.span>
           ))}
-          <span>😊</span>
+          {/*  <span>😊</span>*/}
         </div>
         {/* FORM CONATINER */}
         <div className="contact-form-conatiner">
@@ -60,7 +60,7 @@ const Contacts = () => {
             <span>Dear Mohd. Riyas ,</span>
             <textarea id="" rows="6" name="message" required></textarea>
             <span>My mail address is* :</span>
-            <input type="email" name="user_email" required/>
+            <input type="email" name="user_email" required />
             <span>Regards.</span>
             <button>Send</button>
             {success && (

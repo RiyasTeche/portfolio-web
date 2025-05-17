@@ -13,7 +13,7 @@ const Footer = () => {
     <motion.div className="footer" style={{ opacity }}>
       <div className="footer-container">
         <div className="footer-top">
-          <h1>HIRE ME - CONTENT CREATOR - UI DESINER - WEB APP CREATION - CONSULTING - FREELANCER - HIRE ME</h1>
+          <h1>Hire Me - Content Creator - UI & UX Designer - Full Stack Web Application - Consulting - Freelancer - Hire Me</h1>
         </div>
         <div className="footer-bottom">
           <div className="footer-bottom-conatiner">

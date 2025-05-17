@@ -4,6 +4,7 @@ import "./navbar.css";
 
 import { motion } from "framer-motion";
 import NavLink from "./NavLink";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -35,8 +36,10 @@ const Navbar = () => {
     <div className="navbar">
       <div className="nav-wrapper">
         <div className="logo">
-          <span>Mohd.</span>
-          <span> Riyas</span>
+          <Link to="/">
+            <span>Mohd.</span>
+            <span> Riyas</span>
+          </Link>
         </div>
         <div className="links">
           {links.map((link) => (

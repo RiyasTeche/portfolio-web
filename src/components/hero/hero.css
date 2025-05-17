@@ -81,6 +81,13 @@
   cursor: pointer;
 }
 
+.awardList a:nth-of-type(1) img:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+.awardList a:nth-of-type(2) img:hover {
+  transform: scale(1.2) rotate(-10deg);
+}
+
 .hero-links {
   display: flex;
   align-items: center;
@@ -260,7 +267,7 @@
   }
 
   .sliding-text-container {
-    bottom:20%;
+    bottom: 20%;
   }
 
   .sliding-text-container h1 {

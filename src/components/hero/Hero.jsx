@@ -1,12 +1,12 @@
 import "./hero.css";
 import resume from "./../../../public/resume_riyas.pdf";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 const Hero = () => {
   const textVariants = {
     initial: {
-      x: 1600,
+      x: 200,
       opacity: 0,
     },
     animate: {
@@ -15,6 +15,7 @@ const Hero = () => {
       transition: {
         duration: 2,
         staggerChildren: 0.1,
+        delay:.8,
       },
     },
   };
@@ -49,7 +50,7 @@ const Hero = () => {
           <h2>
             Web# Full Stack Developer
             <br />
-            and _UI Designer
+            and _UI & UX Designer
           </h2>
           <div className="hero-links">
             <a href={resume} target="_blank">
@@ -71,8 +72,8 @@ const Hero = () => {
             <motion.img
               src="./scroll.png"
               alt=""
-              animate={{ y: 10, opacity: 0 }} // Correct: Animating to a number value
-              initial={{ y: 0 }} // Correct: Initial value is also a number
+              animate={{ y: 10, opacity: 0 }} 
+              initial={{ y: 0 }} 
               transition={{
                 duration: 2, // Duration in seconds
                 repeat: Infinity,
@@ -82,7 +83,7 @@ const Hero = () => {
           </div>
         </motion.div>
         <div className="sliding-text-container">
-          <h1>#Writer#Content_Creator-Influencer</h1>
+          <h1>#_Writer#Content_Creator-Influencer</h1>
         </div>
         {/* <motion.div
           className="sliding-text-container"

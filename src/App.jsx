@@ -20,11 +20,11 @@ function App() {
           {/* <Route path="/portfolio-web" element={<About />} /> */}
           <Route path="/experiance" element={<Experiance />} />
           <Route path="/projects" element={<Projects />} />
-        </Route>
 
-        {/* Routes with Conatct Layout */}
-        <Route element={<ContactLayout />}>
-          <Route path="/contact" element={<Contact />} />
+          {/* Routes with Conatct Layout with footer*/}
+          <Route element={<ContactLayout />}>
+            <Route path="/contact" element={<Contact />} />
+          </Route>
         </Route>
 
         {/* 404 Route */}
