@@ -47,7 +47,7 @@
   left: 0;
   right: 0;
   height: 5px;
-  background-color: var(--bg-shade-end);
+  background-color: var(--primary);
   z-index: 1;
 }
 

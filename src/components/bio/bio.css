@@ -1,21 +1,23 @@
-/* .bio-first-section {
-  height: calc(100vh - 100px);
-} */
+.bio-first-section {
+  max-height: calc(100vh - 95px);
+}
+
 .bio {
   height: 100%;
   scroll-snap-align: center;
+  overflow-y: hidden;
 }
 
 .bio-wrapper {
-  height: 100%;
+   height: 100%;
   max-width: 1366px;
   margin: auto;
-  /* overflow: hidden; */
+  overflow-y: hidden;
 
   display: flex;
 }
 
-.bio-text-wrapper{
+.bio-text-wrapper {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -26,29 +28,29 @@
 }
 /* For Chrome, Safari, and Opera */
 .bio-text-wrapper::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
-.bio-text-wrapper h3{
+.bio-text-wrapper h3 {
   background: linear-gradient(180deg, red, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.skills-conatiner{
+.skills-conatiner {
   display: flex;
   flex-direction: column;
-  gap:10px
+  gap: 10px;
 }
 
-.skills-lists{
+.skills-lists {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
   padding-right: 10px;
 }
 
-.skills-lists span{
+.skills-lists span {
   background-color: var(--letter-color1);
   color: var(--bg-color);
   padding: 4px 13px;
@@ -57,46 +59,46 @@
   letter-spacing: 1px;
 }
 
-.skills-lists span:hover{
-  background-color: var(--bg-color);  
-  color:  var(--letter-color1);
+.skills-lists span:hover {
+  background-color: var(--bg-color);
+  color: var(--letter-color1);
   transition: 1s;
 }
 
-.scroll-button{
+.scroll-button {
   cursor: pointer;
 }
 
 /* STYLES FOR EXPERIANCE (WORK HISTORY) */
 
-.experiance-wrapper{
+.experiance-wrapper {
   display: flex;
   flex-direction: column;
-  gap:10px
+  gap: 10px;
 }
 
-.experiance-conatiner{
+.experiance-conatiner {
   display: flex;
   flex-direction: column;
 }
 
-.experiance-list-item{
+.experiance-list-item {
   display: flex;
   justify-content: space-between;
   gap: 10px;
 }
 
-.experiance-item-left{
+.experiance-item-left {
   flex: 1;
 }
-.experiance-item-centre{
-  flex: .2;
+.experiance-item-centre {
+  flex: 0.2;
 }
-.experiance-item-right{
+.experiance-item-right {
   flex: 1;
 }
 
-.job-title{
+.job-title {
   background-color: var(--bg-color);
   padding: 10px 15px;
   font-weight: 500;
@@ -104,20 +106,20 @@
   border-radius: 10px;
 }
 
-.job-desc{
+.job-desc {
   padding: 5px 0;
   font-style: italic;
   font-size: 13px;
 }
 
-.job-date{
+.job-date {
   padding: 5px 0;
   font-size: 13px;
   font-weight: 500;
   color: brown;
 }
 
-.job-company{
+.job-company {
   background-color: var(--bg-color);
   padding: 5px 8px;
   font-weight: 400;
@@ -126,7 +128,7 @@
   width: max-content;
 }
 
-.line{
+.line {
   height: 100%;
   width: 3px;
   background-color: var(--letter-color1);
@@ -136,7 +138,7 @@
   align-items: center;
 }
 
-.line-circle{
+.line-circle {
   height: 20px;
   width: 20px;
   border: solid 2px var(--letter-color1);
@@ -144,20 +146,18 @@
   background-color: var(--bg-color);
   position: absolute;
   left: -8px;
-
 }
 
-
 /* MAIN SVG */
-.bio-svg-wrapper{
+.bio-svg-wrapper {
   flex: 1;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  min-height: 100%;
 }
-
-
 
 /* MEDIA QURIES FOR DIFFERENT SCREEN SIZE */
 
@@ -168,32 +168,34 @@
 }
 
 @media (max-width: 907px) {
-
-  .line-circle{
-    background: var(--letter-color1); 
+  .line-circle {
+    background: var(--letter-color1);
   }
-
 }
 
 @media (max-width: 855px) {
+  .bio {
+    min-height: calc(100vh - 60px);
+  }
+
   .bio-wrapper {
     max-width: 800px;
   }
 
-  .skills-lists span{
+  .skills-lists span {
     font-size: 10px;
   }
 
-  .bio-text-wrapper{
+  .bio-text-wrapper {
     flex: 1.3;
   }
 
-  .bio-svg-wrapper{
+  .bio-svg-wrapper {
     flex: 1;
   }
 
-  .line-circle{
-    background: var(--letter-color1); 
+  .line-circle {
+    background: var(--letter-color1);
   }
 }
 
@@ -202,41 +204,39 @@
     max-width: 710px;
   }
 
-  .bio-svg-wrapper{
+  .bio-svg-wrapper {
     display: none;
   }
 
-  .line-circle{
+  .line-circle {
     background-color: var(--bg-color);
   }
-
 }
 
 @media (max-width: 475px) {
-
-  .line-circle{
-    background: var(--letter-color1); 
+  .line-circle {
+    background: var(--letter-color1);
   }
 
-  .experiance-item-left{
+  .experiance-item-left {
     padding: 10px 10px;
   }
-  .experiance-item-right{
+  .experiance-item-right {
     padding: 10px 10px;
   }
-
 }
 
 @media (max-width: 366px) {
-  .line,.line-circle{
+  .line,
+  .line-circle {
     display: none;
   }
 
-  .experiance-list-item{
-      padding: 10px 0;
+  .experiance-list-item {
+    padding: 10px 0;
   }
 
-  .experiance-item-right{
+  .experiance-item-right {
     border-left: dotted 3px black;
     padding: 0 10px;
   }

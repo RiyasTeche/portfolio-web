@@ -51,7 +51,7 @@ const Bio = () => {
         window.removeEventListener("resize", handleResize);
       };
     }
-  }, [size]); 
+  }, [size]);
 
   return (
     <div className="bio">
@@ -59,13 +59,15 @@ const Bio = () => {
         {/* TEXT CONATINER */}
         <div className="bio-text-wrapper" ref={divRef}>
           {/* SKILLS */}
-          <Skills scrollableConatinerRef={divRef}/>
+          <Skills scrollableConatinerRef={divRef} />
           {/* EXPERIANCE */}
-          <WorkHistory scrollableConatinerRef={divRef}/>
+          <WorkHistory scrollableConatinerRef={divRef} />
         </div>
         {/* SVG CONATINER */}
         <div className="bio-svg-wrapper">
-          <svg style={{ height: "100%", width: "100%" }}>
+          <svg
+            style={{ width: "100%", height: "100%", display: "block" }}
+          >
             <defs>
               <path d="M.416.37V.366L.417.345V.37" id="path-1" />
               <path d="M.298 1.8v-.003a39.974 39.974 0 010 .002" id="path-3" />
